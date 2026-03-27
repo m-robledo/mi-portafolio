@@ -7,8 +7,6 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <style>body { font-family: 'Inter', sans-serif; }</style>
-    
-    <!-- IMPORTANTE: Esto debe estar en todas las páginas para el modo oscuro -->
     <script>
         tailwind.config = {
             darkMode: 'class',
@@ -26,8 +24,6 @@
                     <li><a href="index.html" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition">Inicio</a></li>
                     <li><a href="contacto.html" class="text-indigo-600 dark:text-indigo-400">Contacto</a></li>
                 </ul>
-
-                <!-- Agregamos el botón que faltaba -->
                 <button id="theme-toggle" class="p-2 rounded-full bg-slate-200 dark:bg-slate-700 hover:ring-2 ring-indigo-400 transition-all">
                     <span class="dark:hidden">🌙</span>
                     <span class="hidden dark:inline">☀️</span>
@@ -38,8 +34,6 @@
 
     <main class="container mx-auto px-6 py-12 max-w-2xl">
         <h2 class="text-3xl font-bold text-center mb-8">Hablemos</h2>
-        
-        <!-- Ajustamos el fondo del form para modo oscuro: dark:bg-slate-800 -->
         <form action="https://formspree.io/f/xwvwvoqp" method="POST" class="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-lg space-y-4 border border-transparent dark:border-slate-700 transition-colors">
             <div>
                 <label class="block mb-2 text-sm font-medium">Nombre</label>
@@ -61,10 +55,9 @@
         <footer class="mt-12 text-center border-t border-slate-200 dark:border-slate-700 py-8">
             <p class="mb-4 text-slate-500 dark:text-slate-400">Mis redes sociales:</p>
             <div class="flex justify-center gap-6">
-                <!-- target="_blank" y rel="noopener" son buenas prácticas para enlaces externos -->
                 <a href="https://www.linkedin.com/in/mateo-robledo/" target="_blank" rel="noopener" class="text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 text-sm font-medium transition-colors">LinkedIn</a>
                 <a href="https://github.com/m-robledo" target="_blank" rel="noopener" class="text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 text-sm font-medium transition-colors">GitHub</a>
-                <a href="https://twitter.com" target="_blank" class="text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 text-sm font-medium transition-colors">Twitter</a>
+                <a href="https://twitter.com" target="_blank" rel="noopener" class="text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 text-sm font-medium transition-colors">Twitter</a>
             </div>
         </footer>
     </main>
