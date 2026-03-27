@@ -7,45 +7,73 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <style>body { font-family: 'Inter', sans-serif; }</style>
+    
+    <!-- IMPORTANTE: Esto debe estar en todas las páginas para el modo oscuro -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+        }
+    </script>
 </head>
-<body class="bg-slate-50">
-    <header class="bg-white shadow-sm">
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-900 dark:text-slate-100 transition-colors duration-300">
+    
+    <header class="bg-white dark:bg-slate-800 shadow-sm sticky top-0 z-50 transition-colors">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <span class="text-xl font-bold text-indigo-600">DevFicticio</span>
-            <ul class="flex gap-6">
-                <li><a href="index.html" class="hover:text-indigo-600 transition">Inicio</a></li>
-                <li><a href="proyectos.html" class="hover:text-indigo-600 transition">Proyectos</a></li>
-                <li><a href="contacto.html" class="text-indigo-600">Contacto</a></li>
-            </ul>
+            <span class="text-xl font-bold text-indigo-600 dark:text-indigo-400">M-Robledo</span>
+            
+            <div class="flex items-center gap-6">
+                <ul class="flex gap-6 font-medium">
+                    <li><a href="index.html" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition">Inicio</a></li>
+                    <li><a href="contacto.html" class="text-indigo-600 dark:text-indigo-400">Contacto</a></li>
+                </ul>
+
+                <!-- Agregamos el botón que faltaba -->
+                <button id="theme-toggle" class="p-2 rounded-full bg-slate-200 dark:bg-slate-700 hover:ring-2 ring-indigo-400 transition-all">
+                    <span class="dark:hidden">🌙</span>
+                    <span class="hidden dark:inline">☀️</span>
+                </button>
+            </div>
         </nav>
     </header>
 
     <main class="container mx-auto px-6 py-12 max-w-2xl">
         <h2 class="text-3xl font-bold text-center mb-8">Hablemos</h2>
-        <form action="https://formspree.io/f/tu_id_aqui" method="POST" class="bg-white p-8 rounded-2xl shadow-lg space-y-4">
+        
+        <!-- Ajustamos el fondo del form para modo oscuro: dark:bg-slate-800 -->
+        <form action="https://formspree.io/f/xwvwvoqp" method="POST" class="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-lg space-y-4 border border-transparent dark:border-slate-700 transition-colors">
             <div>
                 <label class="block mb-2 text-sm font-medium">Nombre</label>
-                <input type="text" name="name" required class="w-full p-3 border border-slate-200 rounded-lg outline-none focus:ring-2 focus:ring-indigo-500">
+                <input type="text" name="name" required class="w-full p-3 border border-slate-200 dark:border-slate-600 dark:bg-slate-700 dark:text-white rounded-lg outline-none focus:ring-2 focus:ring-indigo-500 transition-all">
             </div>
             <div>
                 <label class="block mb-2 text-sm font-medium">Email</label>
-                <input type="email" name="email" required class="w-full p-3 border border-slate-200 rounded-lg outline-none focus:ring-2 focus:ring-indigo-500">
+                <input type="email" name="email" required class="w-full p-3 border border-slate-200 dark:border-slate-600 dark:bg-slate-700 dark:text-white rounded-lg outline-none focus:ring-2 focus:ring-indigo-500 transition-all">
             </div>
             <div>
                 <label class="block mb-2 text-sm font-medium">Mensaje</label>
-                <textarea name="message" rows="4" required class="w-full p-3 border border-slate-200 rounded-lg outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
+                <textarea name="message" rows="4" required class="w-full p-3 border border-slate-200 dark:border-slate-600 dark:bg-slate-700 dark:text-white rounded-lg outline-none focus:ring-2 focus:ring-indigo-500 transition-all"></textarea>
             </div>
-            <button type="submit" class="w-full bg-indigo-600 text-white font-bold py-3 rounded-lg hover:bg-indigo-700 transition">Enviar Mensaje</button>
+            <button type="submit" class="w-full bg-indigo-600 text-white font-bold py-3 rounded-lg hover:bg-indigo-700 transition-all shadow-lg shadow-indigo-200 dark:shadow-none">
+                Enviar Mensaje
+            </button>
         </form>
 
-        <footer class="mt-12 text-center border-t py-8">
-            <p class="mb-4 text-slate-500">Mis redes sociales:</p>
+        <footer class="mt-12 text-center border-t border-slate-200 dark:border-slate-700 py-8">
+            <p class="mb-4 text-slate-500 dark:text-slate-400">Mis redes sociales:</p>
             <div class="flex justify-center gap-6">
-                <a href="https://linkedin.com/in/mateo-robledo" target="_blank" class="text-slate-400 hover:text-indigo-600 text-sm">LinkedIn</a>
-                <a href="https://github.com/m-robledo"target="_blank" class="text-slate-400 hover:text-indigo-600 text-sm">GitHub</a>
-                <a href="https://twitter.com" target="_blank" class="text-slate-400 hover:text-indigo-600 text-sm">Twitter</a>
+                <!-- target="_blank" y rel="noopener" son buenas prácticas para enlaces externos -->
+                <a href="https://www.linkedin.com/in/mateo-robledo/" target="_blank" rel="noopener" class="text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 text-sm font-medium transition-colors">LinkedIn</a>
+                <a href="https://github.com/m-robledo" target="_blank" rel="noopener" class="text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 text-sm font-medium transition-colors">GitHub</a>
+                <a href="https://twitter.com" target="_blank" class="text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 text-sm font-medium transition-colors">Twitter</a>
             </div>
         </footer>
     </main>
+
+    <script>
+        const btn = document.getElementById('theme-toggle');
+        btn.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark');
+        });
+    </script>
 </body>
 </html>

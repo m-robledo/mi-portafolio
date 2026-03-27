@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio | Inicio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>body { font-family: 'Inter', sans-serif; }</style>
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+        }
+    </script>
+</head>
+
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-900 dark:text-slate-100 transition-colors duration-300">
+
+    <header class="bg-white dark:bg-slate-800 shadow-sm sticky top-0 z-50 transition-colors">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <span class="text-xl font-bold text-indigo-600 dark:text-indigo-400">M-Robledo</span>
+            
+            <div class="flex items-center gap-6">
+                <ul class="flex gap-6 font-medium">
+                    <li><a href="index.html" class="text-indigo-600 dark:text-indigo-400">Inicio</a></li>
+                    <li><a href="contacto.html" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition">Contacto</a></li>
+                </ul>
+                <button id="theme-toggle" class="p-2 rounded-full bg-slate-200 dark:bg-slate-700 hover:ring-2 ring-indigo-400 transition-all">
+                    <span class="dark:hidden">🌙</span>
+                    <span class="hidden dark:inline">☀️</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-6 py-16">
+        <section class="flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-1/3">
+                <img src="Imagenes/perfil.jpg" alt="Foto de Perfil" class="rounded-2xl shadow-lg w-full max-w-sm border-4 border-white dark:border-slate-700">
+            </div>
+            
+            <div class="md:w-2/3">
+                <h1 class="text-5xl font-bold mb-4">Hola, Mateo Robledo!</h1>
+                <p class="text-lg text-slate-600 dark:text-slate-400 mb-6">
+                   Mi educacion: estudiante en Ingenieria en Sistemas de Información (UTN FRSFCO)
+                </p>
+                
+                <h2 class="text-xl font-semibold mb-4 text-indigo-600 dark:text-indigo-400 underline">Habilidades Técnicas</h2>
+                <div class="flex flex-wrap gap-3">
+                    <span class="bg-indigo-100 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-200 px-4 py-1 rounded-full text-sm font-bold">HTML5</span>
+                    <span class="bg-indigo-100 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-200 px-4 py-1 rounded-full text-sm font-bold">Tailwind CSS</span>
+                    <span class="bg-indigo-100 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-200 px-4 py-1 rounded-full text-sm font-bold">Git / GitHub</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- SCRIPT PARA QUE EL BOTÓN FUNCIONE -->
+    <script>
+        const btn = document.getElementById('theme-toggle');
+        btn.addEventListener('click', () => {
+            // Alterna la clase 'dark' en la etiqueta <html>
+            document.documentElement.classList.toggle('dark');
+        });
+    </script>
+</body>
+</html>
