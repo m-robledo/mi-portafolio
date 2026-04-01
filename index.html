@@ -4,14 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio | Inicio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-    
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-        }
-    </script>
+
 </head>
 <body class="bg-slate-50 text-slate-800 dark:bg-slate-900 dark:text-slate-100 transition-colors duration-300">
     
@@ -103,11 +96,13 @@
             </div>
             </section>
 </main>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
     <script>
-        const btn = document.getElementById('theme-toggle');
-        btn.addEventListener('click', () => {
-            document.documentElement.classList.toggle('dark');
-        });
+        tailwind.config = {
+            darkMode: 'class',
+        }
     </script>
 </body>
 </html>
