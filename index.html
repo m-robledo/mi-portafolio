@@ -7,7 +7,10 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     
-    <style>body { font-family: 'Inter', sans-serif; }</style>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        html { scroll-behavior: smooth; }
+    </style>
 
     <script>
         tailwind.config = {
@@ -15,9 +18,8 @@
         }
     </script>
 </head>
-
 <body class="bg-slate-50 text-slate-800 dark:bg-slate-900 dark:text-slate-100 transition-colors duration-300">
-
+    
     <header class="bg-white dark:bg-slate-800 shadow-sm sticky top-0 z-50 transition-colors">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <span class="text-xl font-bold text-indigo-600 dark:text-indigo-400">M-Robledo</span>
@@ -27,6 +29,7 @@
                     <li><a href="index.html" class="text-indigo-600 dark:text-indigo-400">Inicio</a></li>
                     <li><a href="contacto.html" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition">Contacto</a></li>
                 </ul>
+
                 <button id="theme-toggle" class="p-2 rounded-full bg-slate-200 dark:bg-slate-700 hover:ring-2 ring-indigo-400 transition-all">
                     <span class="dark:hidden">🌙</span>
                     <span class="hidden dark:inline">☀️</span>
@@ -42,9 +45,9 @@
             </div>
             
             <div class="md:w-2/3">
-                <h1 class="text-5xl font-bold mb-4">Hola, Mateo Robledo!</h1>
+                <h1 class="text-5xl font-bold mb-4">Hola, Yo soy Walter White!</h1>
                 <p class="text-lg text-slate-600 dark:text-slate-400 mb-6">
-                   Mi educacion: estudiante en Ingenieria en Sistemas de Información (UTN FRSFCO)
+                   Estudiante de Ingeniería en Sistemas de Información (UTN FRSFCO).
                 </p>
                 
                 <h2 class="text-xl font-semibold mb-4 text-indigo-600 dark:text-indigo-400 underline">Habilidades Técnicas</h2>
@@ -55,7 +58,57 @@
                 </div>
             </div>
         </section>
-    </main>
+       <section class="mt-20">
+            <h2 class="text-3xl font-bold mb-8 text-indigo-600 dark:text-indigo-400 border-b-2 border-indigo-100 dark:border-slate-700 inline-block">Experiencia Laboral</h2>
+            <div class="space-y-8">
+                
+                <article class="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-sm border-l-4 border-indigo-500 hover:shadow-md transition-shadow">
+                    <h3 class="text-xl font-bold">Consultor de Optimización de Procesos</h3>
+                    <p class="text-indigo-500 dark:text-indigo-300 font-medium italic">Los Pollos Hermanos | 2024 - Presente</p>
+                    <p class="mt-2 text-slate-600 dark:text-slate-400">
+                        Responsable de la logística y eficiencia en la distribución de productos a gran escala. Especialista en mantener estándares de pureza del **99.1%** en todos los sistemas implementados. Reporto directamente a la gerencia regional (G. Fring).
+                    </p>
+                </article>
+
+                <article class="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-sm border-l-4 border-indigo-500 hover:shadow-md transition-shadow">
+                    <h3 class="text-xl font-bold">Cofundador e Ingeniero Químico Principal</h3>
+                    <p class="text-indigo-500 dark:text-indigo-300 font-medium italic">Gray Matter Technologies | 2023 - 2024</p>
+                    <p class="mt-2 text-slate-600 dark:text-slate-400">
+                        Investigación y desarrollo de estructuras moleculares complejas. Aunque mi participación fue breve, senté las bases de la propiedad intelectual que hoy vale miles de millones. "Say my name" en el panel de fundadores.
+                    </p>
+                </article>
+
+            </div>
+        </section>
+        <section class="mt-20 pb-10">
+            <h2 class="text-3xl font-bold mb-8 text-indigo-600 dark:text-indigo-400 border-b-2 border-indigo-100 dark:border-slate-700 inline-block">Proyectos Realizados</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <div class="bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow border border-slate-100 dark:border-slate-700">
+                    <img src="Imagenes/bluecrystal.png" alt="E-commerce" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-indigo-600 dark:text-indigo-400">Plataforma de E-commerce: Blue Crystal Inc.</h3>
+                        <p class="text-slate-600 dark:text-slate-400 mb-4">
+                            Desarrollo de un sitio de comercio electrónico con un diseño responsivo y una interfaz optimizada. El cliente requería una plataforma segura y eficiente para la gestión de productos de alta pureza. ¡Heisen-bueno!
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow border border-slate-100 dark:border-slate-700">
+                    <img src="Imagenes/carwash.jpg" alt="Dashboard" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-indigo-600 dark:text-indigo-400">Sistema de Dashboard: Car Wash Management</h3>
+                        <p class="text-slate-600 dark:text-slate-400 mb-4">
+                            Creación de un panel de control para la visualización de métricas y gestión de inventario. Incluye gráficos para el seguimiento de ingresos y egresos, ideal para negocios que necesitan "limpiar" sus números.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+            </section>
+</main>
+
     <script>
         const btn = document.getElementById('theme-toggle');
         btn.addEventListener('click', () => {

@@ -1,13 +1,6 @@
-/* css/styles.css */
-
-/* Importamos las capas base de Tailwind */
-
-/* Aquí podemos añadir estilos personalizados que no tiene Tailwind */
 html {
-    scroll-behavior: smooth; /* Hace que al clickear en el menú baje suavemente */
+    scroll-behavior: smooth;
 }
-
-/* Estilo para el modo oscuro manual si decides no usar la clase de Tailwind */
 .dark-mode {
     background-color: #1a202c;
     color: #f7fafc;
